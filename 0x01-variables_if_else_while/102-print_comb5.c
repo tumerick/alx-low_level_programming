@@ -16,7 +16,7 @@ int main(void)
 	{
 		for (m = 48; m < 58; m++)
 		{
-			o = i;
+			o = n;
 			p = m + 1;
 
 			for (; o < 58; o++)
