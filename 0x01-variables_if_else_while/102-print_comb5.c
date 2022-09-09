@@ -16,12 +16,9 @@ int main(void)
 	{
 		for (m = 48; m < 58; m++)
 		{
-			o = n;
-			p = m + 1;
-
-			for (; o < 58; o++)
+			for (o = n; o < 58; o++)
 			{
-				for (; p < 58; p++)
+				for (p = m + 1; p < 58; p++)
 				{
 
 					putchar(n);
@@ -36,6 +33,7 @@ int main(void)
 						putchar(32);
 					}
 				}
+				m = 48;
 			}
 		}
 	}
