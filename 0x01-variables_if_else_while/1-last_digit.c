@@ -5,27 +5,21 @@
 /**
  * main - <int> n is assigned a random value each execution.
  *
- * Description: determines whether random <int> n
- * is positive, negative, or zero.
+ * Description: prints the last digit stored in the value <int> n
  *
  * Return: 0 (Success)
  */
 
 int main(void)
 {
-	int n;
+	int n, digit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	if (n == 0)
-		printf("%d is zero\n", n);
+	digit = n % 10;
 
-	if (n > 0)
-		printf("%d is positive\n", n);
-
-	if (n < 0)
-		printf("%d is negative\n", n);
+	printf("Last digit of %d is %d\n", n, digit);
 
 	return (0);
 }
