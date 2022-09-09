@@ -33,7 +33,7 @@ int main(void)
 						putchar(32);
 					}
 				}
-				m = 48;
+				p = 48;
 			}
 		}
 	}
