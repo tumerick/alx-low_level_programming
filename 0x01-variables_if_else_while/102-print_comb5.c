@@ -1,44 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - entry line.
+ * main - entry point
  *
- * Description: prints all combinations of single-digit numbers.
+ * Description: prints all combinations of 3 digit numbers.
  *
  * Return: 0 (Success)
  */
 
 int main(void)
 {
-	int n, m, o, p;
+	int f, s;
 
-	for (n = 48; n < 58; n++)
+	for (f = 0; f < 100; f++)
 	{
-		for (m = 48; m < 58; m++)
+		for (s = f + 1; s < 100; s++)
 		{
-			for (o = n; o < 58; o++)
-			{
-				for (p = m + 1; p < 58; p++)
-				{
+			putchar(f / 10 + '0');
+			putchar(f % 10 + '0');
+			putchar(' ');
+			putchar(s / 10 + '0');
+			putchar(s % 10 + '0');
 
-					putchar(n);
-					putchar(m);
-					putchar(32);
-					putchar(o);
-					putchar(p);
-
-					if (n < 57 || m < 56 || o < 57 || p < 57)
-					{
-						putchar(44);
-						putchar(32);
-					}
-				}
-				p = 48;
-			}
+			if (f == 98 && s == 99)
+				break;
 		}
 	}
-
-	putchar(10);
 
 	return (0);
 }
