@@ -24,8 +24,13 @@ int main(void)
 
 			if (f == 98 && s == 99)
 				break;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
+
+	putchar(10);
 
 	return (0);
 }
