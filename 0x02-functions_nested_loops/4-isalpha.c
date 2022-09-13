@@ -9,7 +9,7 @@
  * Return: 1 (Success); 0 (Not Successful)
  */
 
-int _isalpha(int c);
+int _isalpha(int c)
 {
 	if (c >= 'A' && <= 'z')
 	{
