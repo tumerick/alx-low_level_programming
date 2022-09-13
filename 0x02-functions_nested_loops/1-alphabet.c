@@ -5,11 +5,11 @@
  *
  * Description: prints the letters of the alphabet
  *
- * Return: 0 (Success)
+ * Return: void
  *
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char i = 'a';
 
@@ -19,6 +19,4 @@ int main(void)
 	}
 
 	_putchar(10);
-
-	return (0);
 }
