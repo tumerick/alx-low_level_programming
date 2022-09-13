@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * print_last_digit - prints last number of recieved int
@@ -12,5 +13,5 @@
 
 int print_last_digit(int n)
 {
-	return (_abs(n) % 10);
+	return (abs(n) % 10);
 }
