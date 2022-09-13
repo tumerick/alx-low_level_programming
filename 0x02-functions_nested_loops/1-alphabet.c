@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * main - entry line
+ * main - Entry point
  *
- * Description: prints the letters of the alphabet
+ * Description: Prints the letters of the alphabet.
  *
  * Return: void
- *
  */
 
 void print_alphabet(void)
