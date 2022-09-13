@@ -24,6 +24,6 @@ void times_table(void)
 
 		multiplicand = 0;
 		multiplier++;
-		printf('\n')
+		printf("\n");
 	}
 }
