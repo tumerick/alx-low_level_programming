@@ -4,14 +4,14 @@
 /**
  * _abs - returns absolute value
  *
- * @int: type int
+ * @n: type int
  *
  * Description: calculates the absolute value of a given value.
  *
  * Return: type int.
  */
 
-int _abs(int)
+int _abs(int n)
 {
-	return abs(num);
+	return abs(n);
 }
