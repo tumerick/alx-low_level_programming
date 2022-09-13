@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - prints alphabet
  *
  * Description: Prints the letters of the alphabet.
  *
