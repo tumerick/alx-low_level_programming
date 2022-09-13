@@ -2,7 +2,6 @@
 #include <string.h>
 
 /**
- *
  * main - entry line
  *
  * Description: prints "_putchar"
