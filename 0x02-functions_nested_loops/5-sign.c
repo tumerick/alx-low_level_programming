@@ -8,10 +8,10 @@
  * Description: Function recieves @n and prints '+','0','-' if
  * the integer is positive, zero, or negative - respectively.
  *
- * Return: 1 (Value < 0); 0 (Value == 0); -1 (Value < 0)
+ * Return: 1
  */
 
-int print_sign(int n);
+int print_sign(int n)
 {
 	if (n > 0)
 	{
