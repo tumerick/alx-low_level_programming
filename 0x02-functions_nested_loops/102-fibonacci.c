@@ -28,7 +28,7 @@ int fibonacci(int *cache, int n)
  * Return: Always (0)
  */
 
-int main(void)
+void main(void)
 {
 	int i;
 	int n = 50;
@@ -57,5 +57,3 @@ int main(void)
 		}
 	}
 }
-				
-
