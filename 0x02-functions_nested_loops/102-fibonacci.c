@@ -32,9 +32,9 @@ int main(void)
 {
 	int i;
 	int n = 50;
-	int cache[x];
+	int cache[n];
 
-	for (i = 0; i<n; i++)
+	for (i = 0; i < n; i++)
 	{
 		arr[i] = -1;
 	}
