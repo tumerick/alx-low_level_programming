@@ -12,7 +12,7 @@
 int main(void)
 {
 	int c = 2;
-	long int i = 1, j = 2, k;
+	long int i = 1, j = 2, k = 0;
 	
 	for (; c <= 50; c++)
 	{
