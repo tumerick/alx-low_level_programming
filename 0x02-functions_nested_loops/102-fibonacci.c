@@ -28,7 +28,7 @@ int fibonacci(int *cache, int n)
  * Return: Always (0)
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 	int n = 50;
@@ -56,4 +56,6 @@ void main(void)
 			printf("%d, ", cache[i]);
 		}
 	}
+
+	return (0);
 }
