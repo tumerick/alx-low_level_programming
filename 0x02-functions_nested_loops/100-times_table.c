@@ -19,13 +19,13 @@ void print_times_table(int n)
 
 	for (multiplier = 0; multiplier <= n; multiplier++)
 	{
-		for (multiplicand = 1; multiplicand <= n; multiplicand++)
+		for (multiplicand = 0; multiplicand <= n; multiplicand++)
 		{
 			product = multiplicand * multiplier;
 
 			if ( multiplicand == 0)
 			{
-				_putchar( product + '0');
+				_putchar(product + '0');
 			}
 
 			else if (product < 10 && multiplicand != 0)
@@ -42,7 +42,8 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(product + '0');
+				_putchar((product / 10) + '0');
+				_putchar((product % 10) + '0');
 			}
 
 			else if (product >- 100)
