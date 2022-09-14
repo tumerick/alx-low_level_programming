@@ -11,8 +11,9 @@
 
 int main(void)
 {
-	int c = 2;
-	long int i = 1, j = 2, k = 0;
+	int c = 1;
+	long int i = 1, j = 1;
+	long int k;
 	
 	for (; c <= 50; c++)
 	{
