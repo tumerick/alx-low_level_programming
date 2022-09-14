@@ -14,7 +14,7 @@ int main(void)
 	int c = 1;
 	long int i = 1, j = 1;
 	long int k;
-	
+
 	for (; c <= 50; c++)
 	{
 		if (c == 50)
