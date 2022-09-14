@@ -32,7 +32,7 @@ int main(void)
 {
 	int i;
 	int n = 50;
-	int cache[n];
+	int cache[50];
 
 	for (i = 0; i < n; i++)
 	{
