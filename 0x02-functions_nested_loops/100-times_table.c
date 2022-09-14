@@ -10,14 +10,12 @@
 
 void print_times_table(int n)
 {
+	int multiplicand, multiplier, product;
+
 	if (n > 15 || n <= 0)
 	{
 		n = 0;
 	}
-
-	int multiplicand;
-	int multiplier;
-	int product;
 
 	for (multiplier = 0; multiplier <= n; multiplier++)
 	{
