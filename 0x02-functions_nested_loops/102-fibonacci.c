@@ -11,10 +11,10 @@
 
 int main(void)
 {
-	int c = 2, i = 0;
+	int c = 2;
 	long int i = 1, j = 2, k;
 	
-	for (; i <= 50; i++)
+	for (; c <= 50; c++)
 	{
 		if (c == 50)
 		{
