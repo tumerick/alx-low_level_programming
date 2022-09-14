@@ -14,7 +14,7 @@ int fibonacci(int *cache, int n)
 {
 	if (cache[n] == -1)
 	{
-		return (fibonacci(n - 1) + fibonacci(n - 2));
+		return (fibonacci(cache, n - 1) + fibonacci(cache, n - 2));
 	}
 
 	return (cache[n]);
@@ -39,11 +39,20 @@ int main(void)
 	cache[0] = 0;
 	cache[1] = 1;
 
-	for(int i = 0; i < n; i++)
+	fibonacci(cache, n - 1);
+
+	for(int i = 0; i <= n; i++)
 	{
-		printf("%d ", fibonacci(cache, n - 1));
+		if (n == 50)
+		{
+			printf("%d\n", cache[i]);
+		}
+
+		else
+		{
+			printf("%d, ", cache[i]);
+		}
 	}
-	printf("\n");
 }
 				
 
