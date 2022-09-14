@@ -26,7 +26,7 @@ int fibonacci(int *cache, int n)
 
 	else
 	{
-		result (fibonacci(cache, n - 1) + fibonacci(cache, n - 2));
+		result = (fibonacci(cache, n - 1) + fibonacci(cache, n - 2));
 	}
 
 	cache[n] = result;
