@@ -12,7 +12,7 @@ void print_times_table(int n)
 {
 	int multiplicand, multiplier, product;
 
-	if (n > 15 || n <= 0)
+	if (n >= 15 || n <= 0)
 	{
 		n = 0;
 	}
@@ -21,7 +21,9 @@ void print_times_table(int n)
 	{
 		_putchar('0');
 		_putchar(',');
-		_putchar("   ");
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
 
 		for (multiplicand = 1; multiplicand <= n; multiplicand++)
 		{
@@ -34,7 +36,9 @@ void print_times_table(int n)
 
 			else
 			{
-				_putchar("   ");
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' '):
 			}
 
 			_putchar((product % 10) + '0');
@@ -42,7 +46,9 @@ void print_times_table(int n)
 			if (multiplicand < n)
 			{
 				_putchar(',');
-				_putchar("   ");
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
 			}
 		}
 		_putchar(10);
