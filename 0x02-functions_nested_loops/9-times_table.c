@@ -10,18 +10,17 @@
 
 void times_table(void)
 {
-	int multiplicand = 1;
-	int multiplier = 0;
+	int multiplicand, multiplier, product;
 
-	while (multiplier <= 9)
+	for (multiplier = 0; multiplier <= 9; multiplier++)
 	{
 		_putchar('0');
 		_putchar(',');
 		_putchar(' ');
 
-		while  (multiplicand <= 9)
+		for (multiplicand = 1; multiplicand <= 9; multiplicand++)
 		{
-			int product = multiplicand * multiplier;
+			product = multiplicand * multiplier;
 
 			if ((product / 10) > 0)
 			{
@@ -40,12 +39,8 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-
-			multiplicand++;
 		}
-		multiplicand = 0;
-		multiplier++;
-
 		_putchar(10);
 	}
+
 }
