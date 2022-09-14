@@ -17,12 +17,10 @@ int main(void)
 
 	while (j <= 4000000)
 	{
-		if (j % 2 != 0)
+		if (j % 2 == 0)
 		{
-			continue;
+			res += j;
 		}
-
-		res += j;
 
 		k = j;
 		j += i;
