@@ -36,7 +36,7 @@ int main(void)
 
 	for (i = 0; i < n; i++)
 	{
-		arr[i] = -1;
+		cache[i] = -1;
 	}
 
 	cache[0] = 0;
