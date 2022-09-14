@@ -19,7 +19,7 @@ int main(void)
 	{
 		if (j % 2 != 0)
 		{
-			continue
+			continue;
 		}
 
 		res += j;
