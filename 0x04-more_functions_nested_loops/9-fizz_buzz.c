@@ -16,7 +16,7 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("Fizz Buzz ");
+			printf("FizzBuzz");
 			continue;
 		}
 
@@ -32,12 +32,15 @@ int main(void)
 			continue;
 		}
 
-		if (i == 100){
-			printf("%d", i);
+		printf("%d", i);
+		
+		if (i == 100)
+		{
+			printf("\n");
 			break;
 		}
 
-		printf("%d ", i);
+		printf(" ");
 	}
 
 	printf("\n");
