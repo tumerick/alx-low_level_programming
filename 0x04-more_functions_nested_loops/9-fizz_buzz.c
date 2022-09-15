@@ -32,6 +32,11 @@ int main(void)
 			continue;
 		}
 
+		if (i == 100){
+			printf("%d", i);
+			break;
+		}
+
 		printf("%d ", i);
 	}
 
