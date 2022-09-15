@@ -1,7 +1,6 @@
-#include "main.h"
-
 /**
  * _isupper - determines if input string is uppercase.
+ * @c: possible alphneumeric character
  * Return: 1 (success)
  */
 
