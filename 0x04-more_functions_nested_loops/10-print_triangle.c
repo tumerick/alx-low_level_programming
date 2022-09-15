@@ -18,12 +18,12 @@ void print_triangle(int n)
 		return;
 	}
 
-	for (i = 0; i < n; i++)
+	for (i = 1; i <= n; i++)
 	{
-		for (j = 0; j < n; j++)
+		for (j = 1; j <= n; j++)
 		{
 			if ((i + j) <= n)
-				_putchar(' ')l
+				_putchar(' ');
 			else
 				_putchar('#');
 		}
