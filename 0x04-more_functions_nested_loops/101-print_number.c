@@ -18,8 +18,8 @@ void print_number(int n)
 		x = -n;
 	}
 
-	if ((num / 10) > 0)
-		print_number(num / 10);
+	if ((x / 10) > 0)
+		print_number(x / 10);
 
-	_putchar((num % 10) + 48);
+	_putchar((x % 10) + 48);
 }
