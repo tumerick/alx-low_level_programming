@@ -14,12 +14,17 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
 		x = -n;
+		_putchar('-');
 	}
 
-	if ((x / 10) > 0)
+	if (x / 10)
+	{
+		/* recursive call ( to shrink down number )*/
 		print_number(x / 10);
+	}
 
-	_putchar((x % 10) + 48);
+	x = x % 10;
+
+	_putchar(x + 48);
 }
