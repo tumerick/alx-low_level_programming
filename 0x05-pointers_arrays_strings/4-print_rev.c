@@ -11,10 +11,6 @@
 
 void print_rev(char *s)
 {
-	int i = strlen(s) - 1;
-
-	while(i >= 0)
-	{
-		printf("%s", *s[i]);
-	}
+	while(*s != '\0')
+		printf("%s", s++);
 }
