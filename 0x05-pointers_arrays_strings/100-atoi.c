@@ -19,7 +19,10 @@ int _atoi(char *s)
 			continue;
 
 		if (*s == '+' || *s == '-')
-			sign = 1 - 2 * (*s == '-');
+		{
+			sign = 1 - 2 * (*s++ == '-');
+			continue;
+		}
 
 		value *= 10;
 		value += (int) (*s - '0');
