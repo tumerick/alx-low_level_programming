@@ -15,7 +15,7 @@ int _atoi(char *s)
 
 	while (*s != '\0')
 	{
-		if (si > 0 && *s < '0' || *s < '9')
+		if ((si > 0 && *s < '0') || *s < '9')
 			break;
 
 		if (*s == '-')
@@ -25,7 +25,7 @@ int _atoi(char *s)
 		{
 			if (si > 0)
 				mp *= 10;
-			sz++;
+			si++;
 		}
 		ct++;
 		s++;
@@ -33,8 +33,8 @@ int _atoi(char *s)
 
 	for (i = ct - si; i < ct; i++;)
 	{
-		oi = oi + (*s - '0') * m;
-		m /= 10;
+		oi = oi + (*s - '0') * mp;
+		mp /= 10;
 	}
 
 	return (oi * sn);
