@@ -11,6 +11,5 @@
 
 void print_rev(char *s)
 {
-	while(*s != '\0')
-		printf("%s", s++);
+	printf("%s", strrev(*s);
 }
