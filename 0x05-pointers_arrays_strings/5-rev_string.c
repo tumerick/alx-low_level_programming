@@ -12,18 +12,22 @@
 
 void rev_string(char *s)
 {
-	char fir, end;
+	char *end = s;
+	char tmp = 0;
 
-	int len = strlen(s);
-	int mid = len / 2;
-	int max = len - 1;
-
-	while (mid >= 0)
+	if (str)
 	{
-		fir = s[max - mid];
-		end = s[mid];
-		s[mid] = fir;
-		s[max - mid] = end;
-		mid--;
+		while (*end > s)
+		{
+			end++;
+		}
+		end--;
+
+		while (end > s)
+		{
+			tmp = *end;
+			*end-- = *s;
+			*s++ = tmp;
+		}
 	}
 }
