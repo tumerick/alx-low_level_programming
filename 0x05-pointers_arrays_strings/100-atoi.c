@@ -1,5 +1,4 @@
 #include "main.h"
-#include <assert.h>
 #include <ctype.h>
 /**
  * _atoi - converts a string to an integer
@@ -14,12 +13,11 @@ int _atoi(char *s)
 	unsigned int value = 0;
 	int sign = 1;
 
-	if (*s == '+' || *s == '-')
-	{
-		if (*s == '-')
-			sign = -1;
+	while (*s == ' ')
 		s++;
-	}
+
+	if (*s == '+' || *s == '-')
+		sign = 1 - 2 * (*s == '-');
 
 	while (isdigit(*s))
 	{
