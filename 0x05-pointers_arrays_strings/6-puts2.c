@@ -15,9 +15,10 @@ void puts2(char *str)
 
 	while (*str)
 	{
+		str++;
 		if (cntr % 2 != 0)
 			continue;
-		_putchar(*str++);
+		_putchar(*str);
 		cntr++;
 	}
 	_putchar(10);
