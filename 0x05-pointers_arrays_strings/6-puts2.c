@@ -15,9 +15,9 @@ void puts2(char *str)
 
 	while (str[cnt] != '\0')
 	{
-		if (cnt % 2 != 0)
-			continue;
-		_putchar(str[cnt++]);
+		if (cnt % 2 == 0)
+			_putchar(str[cnt]);
+		cnt++;
 	}
 
 	_putchar(10);
