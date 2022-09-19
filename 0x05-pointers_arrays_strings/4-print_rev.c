@@ -20,5 +20,5 @@ void print_rev(char *s)
 		j++;
 	}
 
-	printf("%s\n", output[j]);
+	printf("%s\n", output);
 }
