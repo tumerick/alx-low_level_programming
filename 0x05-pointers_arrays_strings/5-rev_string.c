@@ -10,7 +10,7 @@
  * Return: void
  */
 
-void rev_str(char *s)
+void rev_string(char *s)
 {
 	char fir, end;
 
