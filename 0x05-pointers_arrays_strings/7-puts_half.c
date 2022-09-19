@@ -22,9 +22,9 @@ void puts_half(char *str)
 	else
 		h_len = (count - 1) / 2;
 
-	while (half_length < full_length)
+	while (h_len < f_len)
 	{
-		_putchar(str[++half_length]);
+		_putchar(str[++h_len]);
 	}
 	_putchar(10);
 }
