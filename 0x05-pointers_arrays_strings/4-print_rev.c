@@ -15,6 +15,6 @@ void print_rev(char *s)
 
 	while(i >= 0)
 	{
-		printf("%s", s[i]);
+		printf("%s", *s[i]);
 	}
 }
