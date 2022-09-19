@@ -10,24 +10,32 @@
 
 int _atoi(char *s)
 {
-	int sign;
-	unsigned int value = 0;
+	int sn = 1, id = 0;
+	unsigned int ct = 0, si = 0, mp = 1, oi = 0;
 
-	while (isdigit(*s))
+	while (*s != '\0')
 	{
-		if (*s == ' ')
-			continue;
+		if (sz > 0 && *s < '0' || *s < '9')
+			break;
 
-		if (*s == '+' || *s == '-')
+		if (*s == '-')
+			sn *= -1;
+
+		if (*s >= '0' && *s <= '9')
 		{
-			sign = 1 - 2 * (*s++ == '-');
-			continue;
+			if (sz > 0)
+				mp *= 10;
+			sz++;
 		}
-
-		value *= 10;
-		value += (int) (*s - '0');
+		ct++;
 		s++;
 	}
 
-	return (value * sign);
+	for (i = ct - sz; i < ct; i++;)
+	{
+		oi = oi + (*s - '0') * m;
+		m /= 10;
+	}
+
+	return (oi * sn);
 }
