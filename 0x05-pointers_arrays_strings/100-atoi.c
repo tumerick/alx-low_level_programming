@@ -22,7 +22,7 @@ int _atoi(char *s)
 		sign = 1 - 2 * (s[i++] == '-');
 	}
 
-	while (str[i] >= '0' && str[i] <= '9')
+	while (s[i] >= '0' && s[i] <= '9')
 	{
 		if (base > INT_MAX / 10
 		|| (base == INT_MAX / 10
@@ -34,7 +34,7 @@ int _atoi(char *s)
 				return INT_MIN;
 		}
 
-		base = 10 * base + (str[i++] - '0');
+		base = 10 * base + (s[i++] - '0');
 	}
 	return (base * sign);
 }
