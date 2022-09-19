@@ -18,9 +18,9 @@ void puts_half(char *str)
 	f_len--;
 
 	if (f_len % 2 == 0)
-		h_len = count / 2;
+		h_len = f_len / 2;
 	else
-		h_len = (count - 1) / 2;
+		h_len = (f_len - 1) / 2;
 
 	while (h_len < f_len)
 	{
