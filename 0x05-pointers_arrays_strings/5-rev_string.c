@@ -15,19 +15,19 @@ void rev_string(char *s)
 	char *end = s;
 	char tmp = 0;
 
-	if (str)
-	{
-		while (*end > s)
-		{
-			end++;
-		}
-		end--;
+	if (!s)
+		return;
 
-		while (end > s)
-		{
-			tmp = *end;
-			*end-- = *s;
-			*s++ = tmp;
-		}
+	while (*end > s)
+	{
+		end++;
+	}
+	end--;
+
+	while (end > s)
+	{
+		tmp = *end;
+		*end-- = *s;
+		*s++ = tmp;
 	}
 }
