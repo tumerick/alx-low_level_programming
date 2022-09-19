@@ -15,7 +15,7 @@ int _atoi(char *s)
 
 	while (*s != '\0')
 	{
-		if (sz > 0 && *s < '0' || *s < '9')
+		if (si > 0 && *s < '0' || *s < '9')
 			break;
 
 		if (*s == '-')
@@ -23,7 +23,7 @@ int _atoi(char *s)
 
 		if (*s >= '0' && *s <= '9')
 		{
-			if (sz > 0)
+			if (si > 0)
 				mp *= 10;
 			sz++;
 		}
@@ -31,7 +31,7 @@ int _atoi(char *s)
 		s++;
 	}
 
-	for (i = ct - sz; i < ct; i++;)
+	for (i = ct - si; i < ct; i++;)
 	{
 		oi = oi + (*s - '0') * m;
 		m /= 10;
