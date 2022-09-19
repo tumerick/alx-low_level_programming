@@ -14,5 +14,5 @@ char *_strcpy(char *dest, char *src);
 
 int _strlen(char *s);
 int _putchar(char);
-
+int _atoi(char *s);
 #endif
