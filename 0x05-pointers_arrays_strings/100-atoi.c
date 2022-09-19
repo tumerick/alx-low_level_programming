@@ -10,32 +10,18 @@
 
 int _atoi(char *s)
 {
-	int sn = 1, id = 0;
-	unsigned int ct = 0, si = 0, mp = 1, oi = 0;
+	int sign = 1;
+	unsigned int result = 0;
 
-	while (*s != '\0')
+	while (*s++)
 	{
-		if ((si > 0 && *s < '0') || *s < '9')
+		if (s* == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+			result = (result * 10) + (*s - '0');
+		else if (result > 0)
 			break;
-
-		if (*s == '-')
-			sn *= -1;
-
-		if (*s >= '0' && *s <= '9')
-		{
-			if (si > 0)
-				mp *= 10;
-			si++;
-		}
-		ct++;
-		s++;
 	}
 
-	for (i = ct - si; i < ct; i++;)
-	{
-		oi = oi + (*s - '0') * mp;
-		mp /= 10;
-	}
-
-	return (oi * sn);
+	return (result * sign);
 }
