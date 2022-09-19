@@ -12,4 +12,5 @@ int _atoi(char *s)
 {
 	printf("%d", *s < '0');
 
+	return (1);
 }
