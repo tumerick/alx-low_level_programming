@@ -10,6 +10,6 @@
 
 int _atoi(char *s)
 {
-	printf("%d", *str < '0');
+	printf("%d", *s < '0');
 
 }
