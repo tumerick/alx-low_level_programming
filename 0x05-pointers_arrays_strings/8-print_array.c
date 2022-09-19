@@ -6,6 +6,9 @@
  * seperates each element of the array with a comma
  * does not change the order of the elements in the array.
  *
+ * @a: <int> array
+ * @n: length of <int> array
+ *
  * Return: void
  */
 
