@@ -15,7 +15,7 @@ char *_strcpy(char *dest, char *src)
 	int cnt = 0;
 
 	while (src[cnt] != '\0')
-		dest[cnt] = *(src + i);
+		dest[cnt] = *(src + cnt);
 	dest[i] = '\0';
 
 	return (dest);
