@@ -15,13 +15,9 @@ void _puts(char *str)
 
 	while (str[i])
 	{
-		if (putchar(str[i]) == EOF)
-			return;
+		putchar(str[i])
 		i++;
 	}
 
-	if (putchar('\n') == EOF)
-		return;
-
-	return;
+	putchar('\n')
 }
