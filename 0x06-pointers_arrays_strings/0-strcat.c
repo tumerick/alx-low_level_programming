@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * _strcat - appends the `src` string to the `dest string.
  *
@@ -13,10 +13,10 @@ char *_strcat(char *dest, char *src)
 {
 	char *res = dest;
 
-	while (*dest)
+	while (*dest != '\0')
 		dest++;
-	
-	while ((*dest++ = *src++))
-		;
+
+	while ((*dest++ = *src++));
+
 	return (res);
 }
