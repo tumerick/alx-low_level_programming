@@ -2,7 +2,7 @@
 
 /**
  * leet - converts a string into "leet" speak.
- *
+ * @s: string to be converted.
  * Return: 1337ed string.
  */
 
