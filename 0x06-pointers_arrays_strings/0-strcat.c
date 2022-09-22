@@ -6,7 +6,7 @@
  * @src: `src` <char> array
  * @dest: `dest` <char> array
  *
- * @Return: concatented <char> array
+ * Return: concatented <char> array
  */
 
 char *_strcat(char *dest, char *src)
@@ -16,7 +16,8 @@ char *_strcat(char *dest, char *src)
 	while (*dest != '\0')
 		dest++;
 
-	while ((*dest++ = *src++));
+	while ((*dest++ = *src++))
+		;
 
 	return (res);
 }
