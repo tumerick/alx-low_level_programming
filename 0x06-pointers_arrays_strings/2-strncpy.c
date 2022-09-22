@@ -13,9 +13,10 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	char *res = dest;
+	int cnt = 0;
 
-	while ((*dest++ = *src++))
-		;
+	while (cnt++ < n && *src)
+		*dest++ = *src++;
 
 	return (res);
 }
