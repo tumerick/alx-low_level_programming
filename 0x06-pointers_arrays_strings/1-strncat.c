@@ -7,7 +7,7 @@
  * more bytes.
  *
  * @n: <int> number of characters to concat
- * #src: source <char> array
+ * @src: source <char> array
  * @dest: destination <char> array
  *
  * Return: pointer to `dest`
