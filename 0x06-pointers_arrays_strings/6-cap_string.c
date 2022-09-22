@@ -22,8 +22,8 @@ char *cap_string(char *s)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			j = 0;
 
+			j = 0;
 			while (j++ < 13)
 			{
 				if (s[i - 1] == sep[j])
