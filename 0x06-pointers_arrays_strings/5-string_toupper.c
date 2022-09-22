@@ -6,15 +6,15 @@
  * Return: <char> array
  */
 
-char *string_toupper(char *str)
+char *string_toupper(char *s)
 {
 	int i = 0;
-	
-	for (; str[i]; i++)
+
+	for (; s[i]; i++)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 			s[i] -= 32;
 	}
 
-	return (str);
+	return (s);
 }
