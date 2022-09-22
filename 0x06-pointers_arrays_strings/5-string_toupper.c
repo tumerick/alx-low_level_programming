@@ -3,6 +3,7 @@
 /**
  * string_toupper - capitalizes a lowercase string.
  *
+ * @s: <char> array
  * Return: <char> array
  */
 
