@@ -10,7 +10,7 @@
 
 char *rot13(char *s)
 {
-	int i=0, j;
+	int i = 0, j;
 	char letters[] = {
 		'A', 'B', 'C', 'D', 'E', 'F',
 		'G', 'H', 'I', 'J', 'K', 'L',
