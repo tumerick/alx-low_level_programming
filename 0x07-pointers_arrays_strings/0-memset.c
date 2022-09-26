@@ -10,7 +10,7 @@
  * @b: <char> value to be filled
  *
  * @n: <unsigned int>
- * number of nytes to be filled.
+ * number of 
  *
  * Return: <char>
  */
