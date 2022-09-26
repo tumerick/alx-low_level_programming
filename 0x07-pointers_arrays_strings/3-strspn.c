@@ -2,7 +2,7 @@
 
 /**
  * _strspn - finds the length of a prefix substring
- * 
+ *
  * @s: <char> array
  * @accept: substring to find.
  *
