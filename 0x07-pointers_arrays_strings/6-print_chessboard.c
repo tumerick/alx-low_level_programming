@@ -2,6 +2,8 @@
 /**
  * print_chessboard - prints out a chessboard
  *
+ * @a: chessboard to print
+ *
  * Return: void
  */
 
