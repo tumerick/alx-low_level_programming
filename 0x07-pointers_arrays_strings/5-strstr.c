@@ -14,6 +14,9 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i;
 
+	if (!(*needle))
+		return (haystack);
+
 	while (*haystack)
 	{
 		i = 0;
