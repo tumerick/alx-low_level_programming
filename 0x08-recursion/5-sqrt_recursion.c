@@ -19,7 +19,7 @@ int _sqrt(int n, int i)
 	if (root == n / 2)
 		return (-1);
 
-	return (square(n, root + 1));
+	return (_sqrt(n, root + 1));
 }
 
 /**
