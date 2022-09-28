@@ -13,10 +13,10 @@ int _sqrt(int n, int i)
 {
 	int root = i * i;
 
-	if (root == n)
-		return (root);
+	if (root == m)
+		return (i);
 
-	if (root == n / 2)
+	if (root > n)
 		return (-1);
 
 	return (_sqrt(n, root + 1));
