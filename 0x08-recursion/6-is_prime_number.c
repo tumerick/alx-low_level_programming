@@ -13,7 +13,7 @@ int _is_prime(int n, int d)
 {
 	if (n % d == 0)
 		return (0);
-	
+
 	if (n / 2 == d)
 		return (1);
 
@@ -21,7 +21,7 @@ int _is_prime(int n, int d)
 }
 
 /**
- * is_prime_number - recursively determines whether given 
+ * is_prime_number - recursively determines whether given
  * number of type <int> is a prime number.
  *
  * @n: opperand
@@ -33,7 +33,7 @@ int is_prime_number(int n)
 {
 	if (n % 2 == 0 ||
 	    n % 3 == 0 ||
-	    n < 1)
+	    n <= 1)
 		return (0);
 
 	if (n == 2 || n == 3)
