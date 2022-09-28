@@ -13,7 +13,7 @@ int _sqrt(int n, int i)
 {
 	int root = i * i;
 
-	if (root == m)
+	if (root == n)
 		return (i);
 
 	if (root > n)
