@@ -13,7 +13,10 @@ int _strlen(char *str)
 	int length = 0;
 
 	if (*(str + length))
-		length += _strlen(str + length++);
+	{
+		length++;
+		length += _strlen(str + length);
+	}
 
 	return (length);
 }
@@ -30,13 +33,13 @@ int _strlen(char *str)
 
 int _is_palindrome(char *str, int len, int idx)
 {
-	if (*(s + idx) != *(s + len - 1))
+	if (*(str + idx) != *(str + len - 1))
 		return (0);
 
 	if (idx >= len)
 		return (1);
 
-	return (_is_palindrome(s, len - 1, idx + 1));
+	return (_is_palindrome(str, len - 1, idx + 1));
 }
 
 /**
