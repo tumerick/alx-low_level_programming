@@ -13,7 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	int count = 0, amount, idx;
+	int count = 0, amount, idx, cents;
 	int coins[] = {25, 10, 5, 2, 10};
 
 	if (argc != 2)
@@ -22,15 +22,17 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	while (argv[1] > 0 && ones <= 4)
+	cents = atoi(argv[1]);
+
+	while (cents > 0 && ones <= 4)
 	{
-		if (!(argv[1] >= coins[idx]))
+		if (!(cents>= coins[idx]))
 		{
 			idx++;
 			continue;
 		}
 
-		argv[1] -= coins[idx];
+		cents -= coins[idx];
 		amount++;
 	}
 
