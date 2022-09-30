@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - prints the number of arguments 
+ * main - prints the number of arguments
  *
  * @argc: number of CL arguments
- * 
+ * @argv: array of CL arguments
+ *
  * Return: always 0
  */
 
