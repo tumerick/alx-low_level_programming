@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int count = 0, idx = 0, cents;
-	int coins[] = {25, 10, 5, 2, 10};
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
