@@ -40,7 +40,7 @@ int word_count(char *str)
 
 	while (i++ < len)
 	{
-		if (s[i] != ' ')
+		if (str[i] != ' ')
 		{
 			num_words++;
 			i += word_length(str + i);
