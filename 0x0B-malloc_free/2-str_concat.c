@@ -8,7 +8,7 @@
  * @s1: string to concatenate
  * @s2: string to concaternate
  *
- * @Return: NULL | pointer to concatenated string
+ * Return: NULL | pointer to concatenated string
  */
 
 char *str_concat(char *s1, char *s2)
@@ -19,10 +19,10 @@ char *str_concat(char *s1, char *s2)
 	while (s1[len] || s2[len])
 		len++;
 
-	if (!(s1))
+	if (s1 == NULL)
 		s1 = "";
 
-	if (!(s2))
+	if (s2 == NULL)
 		s2 = "";
 
 	str = (char *) malloc(sizeof(char) * len);
@@ -32,10 +32,10 @@ char *str_concat(char *s1, char *s2)
 
 	idx = 0;
 	while (*s1)
-		str[idx++] = *s1;
+		str[idx++] = *s1++;
 
 	while (*s2)
-		str[idx++] = *s2;
+		str[idx++] = *s2++;
 
 	return (str);
 }
