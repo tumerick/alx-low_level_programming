@@ -60,7 +60,7 @@ int word_count(char *str)
 
 char **strtow(char *str)
 {
-	char *result;
+	char **result;
 	int i = 0, idx = 0, 
 	    num_words, word,
 	    lttrs;
