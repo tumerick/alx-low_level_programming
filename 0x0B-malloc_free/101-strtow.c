@@ -1,65 +1,107 @@
 #include "main.h"
 #include <stdlib.h>
 
+int word_len(char *str);
+int count_words(char *str);
+char **strtow(char *str);
+
 /**
- * strtow - splits a string into individual words
+ * word_len - determines the length of a substr
  *
- * @str: string to split
+ * @str: <string>
  *
- * Return: NULL | pointer to an array of strings
+ * Return: <int>
  */
-
-char **strtow(char *str)
+int word_len(char *str)
 {
-	char **result, *tmp;
-	int i = 0, j = 0, len = 0,
-	    c = 0, words = 0, start, end;
+	int idx = 0, len = 0;
 
-	while (str[len])
+	while (str[idx] && str[idx] != ' ')
+	{
+		len++;
+		idx++;
+	}
+
+	return (len);
+}
+
+/**
+ * count_words - Counts the number of words in a string.
+ * 
+ * @str: <string>
+ *
+ * Return: <int>
+ */
+int count_words(char *str)
+{
+	int idx, word_count = 0, len = 0;
+
+	for (idx = 0; str[idx]; idx++)
 		len++;
 
-	if (len == 0)
-		return (NULL);
-
-	while (str[i])
+	for (idx = 0; idx < len; idx++)
 	{
-		if (str[i++] != ' ')
-			words++;
+		if (str[idx] != ' ')
+		{
+			word_count++;
+			idx += word_len(str + idx);
+		}
 	}
 
-	result = (char **) malloc(sizeof(char *) * (words + 1));
+	return (word_count);
+}
 
-	if (result == NULL)
+/**
+ * strtow - splits a string into words.
+ * 
+ * @str: <string>
+ *
+ * Return: NULL || pointer to array
+ */
+char **strtow(char *str)
+{
+	char **result;
+	int idx = 0, word_count, letters, i, j;
+
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	for (i = 0; i <= len; i++)
+	word_count = count_words(str);
+
+	if (word_count == 0)
+		return (NULL);
+
+	result = malloc(sizeof(char *) * (word_count + 1));
+	
+	if (result == NULL)
 	{
-		if (str[i] == ' ' || str[i] == '\0')
+		free(result);
+		return (NULL);
+	}
+
+	for (i = 0; i < word_count; i++)
+	{
+		while (str[idx] == ' ')
+			idx++;
+
+		letters = word_len(str + idx);
+
+		result[i] = malloc(sizeof(char) * (letters + 1));
+
+		if (result[i] == NULL)
 		{
-			if (c)
-			{
-				end = i;
-				tmp = (char *) malloc(sizeof(char) * (c + 1));
-
-				if (tmp == NULL)
-					return (NULL);
-
-				while (start < end)
-					*tmp++ = str[start++];
-
-				*tmp = '\0';
-				result[j++] = tmp - c;
-				c = 0;
-			}
-
-			continue;
+			while (i--)
+				free(result[i]);
+			free(result);
+			return (NULL);
 		}
 
-		if (c++ == 0)
-			start = i;
-	}
+		for (j = 0; j < letters; j++)
+			result[i][j] = str[idx++];
 
-	result[j] = NULL;
+		result[i][j] = '\0';
+	}
+	result[i] = NULL;
 
 	return (result);
 }
