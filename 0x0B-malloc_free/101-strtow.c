@@ -15,6 +15,9 @@ char **strtow(char *str)
 	int i = 0, j = 0, len = 0,
 	    c = 0, words = 0, start, end;
 
+	if (*str == ' ' || *str == "")
+		return (NULL);
+
 	while (str[len])
 		len++;
 
