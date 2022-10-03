@@ -31,10 +31,10 @@ char *argstostr(int ac, char **av)
 	while (**av)
 	{
 		while (*av)
-			*str++ = *av;
+			*result++ = *av;
 
-		*str++ = '\n';
+		*result++ = '\n';
 	}
 
-	return (str);
+	return (result);
 }
