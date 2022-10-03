@@ -32,10 +32,10 @@ char *str_concat(char *s1, char *s2)
 
 	idx = 0;
 	while (*s1)
-		str[idx++];
+		str[idx++] = *s1;
 
 	while (*s2)
-		str[idx++];
+		str[idx++] = *s2;
 
 	return (str);
 }
