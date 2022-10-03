@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 		while (*av)
 			len++;
 
-	result = (char *) malloc(sizeof(char) * ac);
+	result = (char *) malloc(sizeof(char) * len + 1);
 
 	if (result == NULL)
 		return (NULL);
@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 	while (**av)
 	{
 		while (*av)
-			*result++ = *av;
+			*result++ = *av++;
 
 		*result++ = '\n';
 	}
