@@ -24,14 +24,20 @@ int **aloc_grid(int width, int height)
 	if (result == NULL)
 		return (NULL);
 
-	for (i = 0; i < height; i++)
+	i = 0;
+	while (i < height)
 	{
-		result[i] = (int *) malloc(sizeof(int) * width);
+		result[i++] = (int *) malloc(sizeof(int) * width);
 
 		if (result[i] == NULL)
 			return (NULL);
+	}
 
-		result[i][j] = 0;
+	i = 0, j = 0;
+	while (i < height)
+	{
+		while (j < width)
+			result[i++][j++] = 0;
 	}
 
 	return (result);
