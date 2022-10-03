@@ -11,7 +11,7 @@
  * Return: NULL | pointer to array
  */
 
-int **aloc_grid(int width, int height)
+int **alloc_grid(int width, int height)
 {
 	int **result;
 	int i, j;
