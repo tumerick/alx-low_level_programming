@@ -83,7 +83,7 @@ char **strtow(char *str)
 		while (str[idx] == ' ')
 			idx++;
 
-		lttrs = word_len(str + idx);
+		lttrs = word_length(str + idx);
 
 		result[word] = malloc(sizeof(char *) * lttrs + 1);
 
