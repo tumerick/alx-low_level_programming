@@ -27,7 +27,7 @@ int word_len(char *str)
 
 /**
  * count_words - Counts the number of words in a string.
- * 
+ *
  * @str: <string>
  *
  * Return: <int>
@@ -53,7 +53,7 @@ int count_words(char *str)
 
 /**
  * strtow - splits a string into words.
- * 
+ *
  * @str: <string>
  *
  * Return: NULL || pointer to array
@@ -72,7 +72,7 @@ char **strtow(char *str)
 		return (NULL);
 
 	result = malloc(sizeof(char *) * (word_count + 1));
-	
+
 	if (result == NULL)
 	{
 		free(result);
