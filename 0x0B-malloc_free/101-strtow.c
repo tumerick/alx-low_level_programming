@@ -85,7 +85,7 @@ char **strtow(char *str)
 
 		lttrs = word_length(str + idx);
 
-		result[word] = malloc(sizeof(char *) * lttrs + 1);
+		result[word] = (char *) malloc(sizeof(char *) * lttrs + 1);
 
 		if (result[word] == NULL)
 			return (NULL);
