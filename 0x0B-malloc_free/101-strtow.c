@@ -2,55 +2,6 @@
 #include <stdlib.h>
 
 /**
- * word_length - counts the length of a given string
- *
- * @str: <string>
- *
- * Return: <int>
- */
-
-int word_length(char *str)
-{
-	int idx = 0, len = 0;
-
-	while (str[idx] && str[idx] != ' ')
-	{
-		len++;
-		idx++;
-	}
-
-	return (len);
-}
-
-/**
- * word_count - counts the number of words 
- * in a string.
- *
- * @str: <string>
- *
- * Return: <int>
- */
-
-int word_count(char *str)
-{
-	int i, num_words = 0, len = 0;
-
-	while (*str)
-		len++;
-
-	while (i++ < len)
-	{
-		if (str[i] != ' ')
-		{
-			num_words++;
-			i += word_length(str + i);
-		}
-	}
-
-	return (num_words);
-}
-
-/**
  * strtow - splits a string into individual words
  *
  * @str: string to split
@@ -60,43 +11,52 @@ int word_count(char *str)
 
 char **strtow(char *str)
 {
-	char **result;
-	int i = 0, idx = 0, 
-	    num_words, word,
-	    lttrs;
+	char **result, *tmp;
+	int i = 0, j = 0, len = 0,
+	    c = 0, words = 0, start, end;
 
-	if (str == NULL || str[0] == '\0')
-		return (NULL);
+	while (str[len])
+		len++;
 
-	num_words = word_count(str);
+	while (str[i])
+	{
+		if (str[i++] != ' ')
+			words++;
+	}
 
-	if (num_words == 0)
-		return (NULL);
-
-	result = malloc(sizeof(char *) * (num_words + 1));
+	result = (char **) malloc(sizeof(char *) * (words + 1));
 
 	if (result == NULL)
 		return (NULL);
 
-	for (word = 0; word < num_words; word++)
+	for (i = 0; i <= len; i++)
 	{
-		while (str[idx] == ' ')
-			idx++;
+		if (str[i] == ' ' || str[i] == '\0')
+		{
+			if (c)
+			{
+				end = i;
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
 
-		lttrs = word_length(str + idx);
+				if (tmp == NULL)
+					return (NULL);
 
-		result[word] = malloc(sizeof(char) * (lttrs + 1));
+				while (start < end)
+					*tmp++ = str[start++];
 
-		if (result[word] == NULL)
-			return (NULL);
+				*tmp = '\0';
+				result[j++] = tmp - c;
+				c = 0;
+			}
 
-		for (i = 0; i < lttrs; i++)
-			result[word][i] = str[idx++];
+			continue;
+		}
 
-		result[word][i] = '\0';
+		if (c++ == 0)
+			start = i;
 	}
 
-	result[word] = NULL;
+	result[j] = NULL;
 
 	return (result);
 }
