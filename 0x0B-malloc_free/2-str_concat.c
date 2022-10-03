@@ -14,7 +14,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *str;
-	int len = 0;
+	int len = 0, idx;
 
 	while (s1[len] || s2[len])
 		len++;
@@ -30,11 +30,12 @@ char *str_concat(char *s1, char *s2)
 	if (str == NULL)
 		return (NULL);
 
+	idx = 0;
 	while (*s1)
-		*str++ = *s1++;
+		str[idx++] = *s1++;
 
 	while (*s2)
-		*str++ = *s2++;
+		str[idx++] = *s2++;
 
 	return (str);
 }
