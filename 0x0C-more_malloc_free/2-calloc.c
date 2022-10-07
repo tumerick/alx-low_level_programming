@@ -13,8 +13,9 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int total = nmemb * size;
+	unsigned int total = nmemb * size, i = 0;
 	void *result;
+	char *other;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -23,6 +24,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (result == NULL)
 		return (NULL);
+
+	other = result;
+
+	for (; i < total; i++)
+		other[i] = '\0';
 
 	return (result);
 }
