@@ -53,7 +53,7 @@ void print_int(unsigned long int n)
 {
 	unsigned long int div = 1, idx, res;
 
-	for (idx=0; n / div > 9; idx++, div *= 10)
+	for (idx = 0; n / div > 9; idx++, div *= 10)
 	;
 
 	for (; div >= 1; n %= div, div /= 10)
@@ -64,7 +64,7 @@ void print_int(unsigned long int n)
 }
 
 /**
- * mul - multiplies two recieved <int> values and prints the result
+ * main - multiplies two recieved <int> values and prints the result
  *
  * @argc: <int>
  * @argv: <array>
