@@ -3,14 +3,14 @@
 #include <stdlib.h>
 
 /**
- * str_len - determines the length of a string
+ * _strlen - determines the length of a string
  *
  * @str: <string>
  *
  * Return: <int>
  */
 
-int str_len(char *str)
+int _strlen(char *str)
 {
 	int len = 0;
 
@@ -62,22 +62,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (_dog == NULL)
 		return (NULL);
 
-	_dog->age = age;
-
-	_dog->name = malloc(sizeof(char) * (str_len(name) + 1));
+	_dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (_dog->name == NULL)
 	{
 		free(_dog);
 		return (NULL);
 	}
 
-	_dog->owner = malloc(sizeof(char) * (str_len(owner) + 1));
+	_dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (_dog->owner == NULL)
 	{
 		free(_dog->name);
 		return (NULL);
 	}
 
+	_dog->age = age;
 	_dog->name = _strcopy(_dog->name, name);
 	_dog->owner = _strcopy(_dog->owner, owner);
 
