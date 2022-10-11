@@ -2,6 +2,24 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - determines the length of a given string
+ *
+ * @str: <string>
+ *
+ * Return: <int>
+ */
+
+int _strlen(char *str)
+{
+	int idx = 0;
+
+	for (; str[idx]; idx++)
+		;
+
+	return (idx);
+}
+
+/**
  * _strcpy - copies a <string> pointed to by `src`
  * includes the terminating null byte
  *
@@ -36,7 +54,6 @@ char *_strcpy(char *src, char *dest)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *_dog;
-	int idx;
 
 	if (!(owner) || !(name))
 		return (NULL);
@@ -48,15 +65,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (idx = 0; name[idx]; idx++)
-		;
-
-	_dog->name = malloc(idx + 1);
-
-	for (idx = 0; owner[idx]; idx++)
-		;
-
-	_dog->owner = malloc(idx + 1);
+	_dog->name = malloc(_strlen(name) + 1);
+	_dog->owner = malloc(_strlen(owner) + 1);
 
 	if (!(_dog->name) || !(_dog->owner))
 	{
