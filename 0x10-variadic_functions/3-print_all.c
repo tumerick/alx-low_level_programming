@@ -31,6 +31,9 @@ void print_all(const char * format, ...)
 				printf("%s%d", sep, va_arg(params, int));
 				break;
 
+			case 'f':
+				printf("%s%f", sep, va_arg(params, double));
+
 			case 's':
 				str = va_arg(params, char *);
 				if (!str)
