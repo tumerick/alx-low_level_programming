@@ -33,6 +33,7 @@ void print_all(const char * format, ...)
 
 			case 'f':
 				printf("%s%f", sep, va_arg(params, double));
+				break;
 
 			case 's':
 				str = va_arg(params, char *);
