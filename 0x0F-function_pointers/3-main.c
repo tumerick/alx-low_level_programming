@@ -23,7 +23,7 @@ void quit(int status)
  * Return: Always 0
  */
 
-int main(int argc, char *argv[])
+int main(int __attribut__((__unused__)) argc, char *argv[])
 {
 	int x, y;
 	char *op;
