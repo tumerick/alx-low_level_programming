@@ -6,7 +6,7 @@
  * @array: <array> to search
  * @size: <int> length of `array`
  * @cmp: function pointer to compare values
- * 
+ *
  * Return: -1 (Not found or size <= 0) || array[i]
  */
 
