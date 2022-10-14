@@ -4,12 +4,14 @@
 
 /**
  * quit - prints Error and exits with status code 98
+ *
+ * @status: <int>
  */
 
-void quit(void)
+void quit(int status)
 {
 	printf("Error\n");
-	exit(98);
+	exit(status);
 }
 
 /**
@@ -23,24 +25,21 @@ void quit(void)
 
 int main(int argc, char *argv[])
 {
-	int x;
-	int y;
+	int x, y;
 	char *op;
 
-	(void) argc;
-
 	if (argc != 4)
-		quit();
+		quit(98);
 
 	op = argv[2];
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
 
 	if (!get_op_func(op) || op[1] != '\0')
-		quit();
+		quit(99);
 
 	if (y == 0 && (*op == '/' || *op == '%'))
-		quit();
+		quit(100);
 
 	printf("%d\n", get_op_func(op)(x, y));
 
