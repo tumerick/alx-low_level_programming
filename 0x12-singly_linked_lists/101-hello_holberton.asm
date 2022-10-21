@@ -1,3 +1,8 @@
+; My comments: file prints "Hello, Holberton"
+; File: 101-hello_holberton.asm
+; Auth: Joshua Burger
+; Desc: 64-bit assembly program that prints "Hello, Holverton\n"
+
 	.file	"tmp.c"
 	.text
 	.section	.rodata
