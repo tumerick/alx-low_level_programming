@@ -10,13 +10,13 @@
  * Return: listint_t || NULL (Fail)
  */
 
-listint_t get_nodeint_at_index(listint_t *head, unsigned int index)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int idx = 0;
 	listint_t *tmp_list = head;
 
 	while (tmp_list && idx++ < index)
-		temp_list = tmp_list->next;
+		tmp_list = tmp_list->next;
 
 	return (tmp_list ? tmp_list : NULL);
 }
